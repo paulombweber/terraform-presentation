@@ -1,6 +1,6 @@
 # Remote State Config
 
-You can either run the commands bellow to create a storage and tell terraform to storage the state in this remote state, or delete the file 'backend.tf', in this case the state will be created in a local file, in this case it can be hard to work with other people.
+You can either run the commands bellow to create a storage and tell terraform to storage the state in this remote state, or delete `backend.tf` file, in this case the state will be created in a local file, in this case it can be hard to work with other people.
 
 ```bash
 RESOURCE_GROUP_NAME=remotestate ##For this example it must not be equal to resource_group on terraform.tfvars.json
