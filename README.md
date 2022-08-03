@@ -1,4 +1,4 @@
-#Remote State Config
+# Remote State Config
 
 You can either run the commands bellow to create a storage and tell terraform to storage the state in this remote state, or delete the file 'backend.tf', in this case the state will be created in a local file, in this case it can be hard to work with other people.
 
@@ -17,7 +17,7 @@ az storage account create --resource-group $RESOURCE_GROUP_NAME --name $STORAGE_
 az storage container create --name $CONTAINER_NAME --account-name $STORAGE_ACCOUNT_NAME
 ```
 
-#Commands
+# Commands
 
 terraform apply = Creates the infrastructure
 npm run build = Build the code to js(if needed)
