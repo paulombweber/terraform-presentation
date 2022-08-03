@@ -1,0 +1,14 @@
+{
+  "version": "2.0",
+  "functionTimeout": "00:00:10",
+  "extensionBundle": {
+    "id": "Microsoft.Azure.Functions.ExtensionBundle",
+    "version": "[3.3.0, 4.0.0)"
+  },
+  "extensions": {
+    "http": {
+      "routePrefix": "api",
+      "maxOutstandingRequests": 30000
+    }
+  }
+}
