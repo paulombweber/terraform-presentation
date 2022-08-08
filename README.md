@@ -22,5 +22,5 @@ az storage container create --name $CONTAINER_NAME --account-name $STORAGE_ACCOU
 terraform init = initializes the terraform
 terraform plan = create and display a execution plan
 terraform apply = Creates the infrastructure
-npm run build = Build the code to js(if needed)
+npm i && npm run build = install dependencies and builds the code to js(if needed)
 func azure functionapp publish syncbackend --javascript = Deploy the function code

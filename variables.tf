@@ -3,7 +3,6 @@ variable "resource_group_name" {
 }
 
 variable "subscription_id" {
-  default     = null
   description = "The subscription ID where the resources should be created."
 }
 

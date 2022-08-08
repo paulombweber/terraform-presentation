@@ -87,18 +87,3 @@ resource "azurerm_linux_function_app" "function_app" {
     azurerm_application_insights.application_insights
   ]
 }
-
-resource "azurerm_linux_function_app_slot" "app_slot" {
-  for_each = toset(var.deployment_slots)
-
-  name                 = each.key
-  function_app_id      = azurerm_linux_function_app.function_app.id
-  storage_account_name = azurerm_storage_account.storage_account.name
-
-  site_config {}
-
-  depends_on = [
-    azurerm_linux_function_app.function_app
-  ]
-}
-
