@@ -1,3 +1,14 @@
+# Requirements
+
+- Azure Client -installed and logged
+- Azure Functions Core Tools
+- Terraform
+- Node.js >= 16
+
+# Variables
+
+Open `terraform.tfvars.json` file and update it with yout subscription_id (when you log into azure client it should print it, or open Azure Portal and search `Subscriptions`), the other inputs may stay the same.
+
 # Remote State Config
 
 You can either run the commands bellow to create a storage and tell terraform to storage the state in this remote state, or delete `backend.tf` file, in this case the state will be created in a local file, in this case it can be hard to work with other people.
