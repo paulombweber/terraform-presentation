@@ -14,6 +14,10 @@ resource "azurerm_storage_account" "storage_account" {
   account_replication_type = var.account_replication_type
 
   tags = merge(local.stack_tags, tomap({ "environment" = var.environment }), tomap({ "release" = var.release }))
+
+  depends_on = [
+    azurerm_resource_group.resource_group
+  ]
 }
 
 
@@ -26,6 +30,10 @@ resource "azurerm_service_plan" "service_plan" {
   os_type             = "Linux"
 
   tags = local.stack_tags
+
+  depends_on = [
+    azurerm_resource_group.resource_group
+  ]
 }
 
 // Application Insights
@@ -37,6 +45,10 @@ resource "azurerm_application_insights" "application_insights" {
   retention_in_days   = var.application_insights_retention_days
 
   tags = local.stack_tags
+
+  depends_on = [
+    azurerm_resource_group.resource_group
+  ]
 }
 
 // Function App
